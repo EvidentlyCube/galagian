@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="Flex" version="4">
+  <component name="FlexBuildConfigurationManager" active="Galagian (Debug)">
+    <configurations>
+      <configuration name="Galagian (Debug)" pure-as="true" main-class="core.preloader.Preloader" output-file="Galagian_DEBUG.swf" output-folder="$MODULE_DIR$/bin">
+        <dependencies target-player="10.1">
+          <sdk name="flex_sdk_4.6.0_a_3.6" />
+        </dependencies>
+        <compiler-options>
+          <map>
+            <entry key="compiler.locale" value="" />
+          </map>
+          <option name="resourceFilesMode" value="None" />
+          <option name="additionalOptions" value="-default-size=500,550 -default-frame-rate=60 -default-background-color=0xFFFFFF -frame=ContentFrame,core.Galagian" />
+        </compiler-options>
+        <packaging-air-desktop />
+        <packaging-android />
+        <packaging-ios />
+      </configuration>
+      <configuration name="Galagian (Release)" pure-as="true" main-class="core.preloader.Preloader" output-file="Galagian.swf" output-folder="$MODULE_DIR$/bin">
+        <dependencies target-player="10.1">
+          <sdk name="flex_sdk_4.6.0_a_3.6" />
+        </dependencies>
+        <compiler-options>
+          <map>
+            <entry key="compiler.debug.swf" value="false" />
+            <entry key="compiler.locale" value="" />
+          </map>
+          <option name="resourceFilesMode" value="None" />
+          <option name="additionalOptions" value="-default-size=500,550 -default-frame-rate=60 -default-background-color=0xFFFFFF -frame=ContentFrame,core.Galagian" />
+        </compiler-options>
+        <packaging-air-desktop />
+        <packaging-android />
+        <packaging-ios />
+      </configuration>
+    </configurations>
+    <compiler-options />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src.framework" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="flex_sdk_4.6.0_a_3.6" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
