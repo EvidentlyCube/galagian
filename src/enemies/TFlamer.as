@@ -34,7 +34,7 @@
 		}
 
 		public function Update(myID:uint):void {
-			gfx.blendMode = "normal";
+			setWhiteBlink(false);
 			if (hook == 0) {
 				x += (tox - x) / 30;
 				y += (toy - y) / 30;

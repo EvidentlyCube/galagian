@@ -33,7 +33,7 @@
 		}
 
 		public function Update(myID:uint):void {
-			gfx.blendMode = "normal";
+			setWhiteBlink(false);
 			movex = Math.min(3, Math.max(-3, movex + (Sign(tox - x) / 10)) * Galagian.diffSpd);
 			movey = Math.min(3, Math.max(-3, movey + (Sign(toy - y) / 10)));
 			x += movex;

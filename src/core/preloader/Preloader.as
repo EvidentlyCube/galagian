@@ -29,7 +29,7 @@
 		public var app:IGalagian;
 		[Embed(source="../../../src.font/font.ttf", fontFamily="Fonter", embedAsCFF="false")]
 		private var Fonter:Class;
-		[Embed(source="../../../src.assets/gfx/preloader/Preloader.jpg")]
+		[Embed(source="../../../src.assets/gfx/preloader/Preloader.png")]
 		private var GLOGO:Class;
 		[Embed(source="../../../src.assets/gfx/preloader/PreloadingBar.png")]
 		private var gbar:Class;
@@ -62,7 +62,7 @@
 			layer = new RetrocamelLayerFlashSprite();
 
 
-			bb.graphics.beginFill(0);
+			bb.graphics.beginFill(0, 0);
 			bb.graphics.drawRect(0, 0, 500, 550);
 			bb.graphics.endFill();
 			layer.addChild(bb);
@@ -71,7 +71,7 @@
 
 
 			var recter:Sprite = new Sprite;
-			recter.graphics.beginFill(0x000000);
+			recter.graphics.beginFill(0x000000, 0);
 			recter.graphics.drawRect(0, 267, 500, 103);
 			recter.graphics.endFill();
 
@@ -88,7 +88,7 @@
 				"Click to Visit!\n" +
 				"opens in new window</font></p>";
 
-			logo1r.graphics.beginFill(0xFFFFFF, 0.4);
+			logo1r.graphics.beginFill(0xFFFFFF, 0);
 			logo1r.graphics.drawRect(0, 374, 275, 118);
 			logo1r.graphics.endFill();
 			logo1r.buttonMode = true;
@@ -97,7 +97,7 @@
 			logo1.addChild(txter);
 			logo1.visible = false;
 
-			logo2.graphics.beginFill(0xFFFFFF, 0.4);
+			logo2.graphics.beginFill(0xFFFFFF, 0);
 			logo2.graphics.drawRect(375, 373, 119, 118);
 			logo2.graphics.endFill();
 			logo2.buttonMode = true;
@@ -107,17 +107,17 @@
 			var bitm:Bitmap = getBitmap(gtxt);
 			bitm.y = 300;
 			//gfx.visible=false
-			texter.graphics.beginFill(0x000000);
+			texter.graphics.beginFill(0x000000, 0);
 			texter.graphics.drawRect(0, 267, 500, 103);
 			texter.graphics.endFill();
 			texter.addChild(bitm);
 			texter.alpha = 0;
 			bar = getBitmap(gbar);
-			bar.x = 96;
-			bar.y = 303;
+			bar.x = 99;
+			bar.y = 163;
 			bar.mask = barm;
 			barm.graphics.beginFill(0xFFFFFF);
-			barm.graphics.drawRect(96, 303, 307, 28);
+			barm.graphics.drawRect(99, 0, 307, 550);
 			barm.graphics.endFill();
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 			stage.showDefaultContextMenu = false;

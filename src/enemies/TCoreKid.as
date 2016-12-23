@@ -28,7 +28,7 @@
 		}
 
 		public function Update(myID:uint):void {
-			gfx.blendMode = "normal";
+			setWhiteBlink(false);
 			if (master.spd == 0) {
 				kill();
 				List.EnemyRem(myID)

@@ -33,7 +33,7 @@
 		}
 
 		public function Update(myID:uint):void {
-			gfx.blendMode = "normal";
+			setWhiteBlink(false);
 			var enx:TPlayer = Galagian.Player;
 			if (enx != null) {
 				movex = Math.min(spd, Math.max(-spd, movex + (Sign(enx.midx - x - 12.5) / 20) * Galagian.diffSpd))

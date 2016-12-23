@@ -1,3 +1,7 @@
+![Galagian logo](.readme/logo.png?raw=true)
+
+[![Galagain Screen 1](.readme/screen1_thumb.png?raw=true)](.readme/screen1.png?raw=true) [![Galagain Screen 2](.readme/screen2_thumb.png?raw=true)](.readme/screen2.png?raw=true) [![Galagain Screen 3](.readme/screen3_thumb.png?raw=true)](.readme/screen3.png?raw=true) [![Galagain Screen 4](.readme/screen4_thumb.png?raw=true)](.readme/screen4.png?raw=true) [![Galagain Screen 5](.readme/screen5_thumb.png?raw=true)](.readme/screen5.png?raw=true)
+
 Galagian is a wave-based top-down shmup with bullet-hellish gameplay and a load of enemies.
 
 When inspecting the source code please remember that this was the very first ActionScript 3.0 game I have ever made. It's dated and it's awful, it was slightly refactored to make it a bit more palatable but...

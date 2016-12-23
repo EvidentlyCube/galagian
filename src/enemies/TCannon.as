@@ -52,7 +52,7 @@
 		}
 
 		public function Update(myID:uint):void {
-			gfx.blendMode = "normal";
+			setWhiteBlink(false);
 			if (!hook) {
 				x += (tox - x) / 15;
 				y += (toy - y) / 15;

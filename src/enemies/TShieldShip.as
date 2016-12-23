@@ -26,7 +26,7 @@
 		}
 
 		public function Update(myID:uint):void {
-			gfx.blendMode = "normal";
+			setWhiteBlink(false);
 			x += movex;
 			if (y < 280) {
 				y += Galagian.diffSpd * Galagian.diffAtk

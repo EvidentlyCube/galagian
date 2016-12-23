@@ -40,6 +40,8 @@ package core {
 			midScreenMessage.autoSize = TextFieldAutoSize.NONE;
 			midScreenMessage.wordWrap = true;
 			midScreenMessage.width = 500;
+			midScreenMessage.selectable = false;
+			midScreenMessage.mouseEnabled = false;
 			var huder:Bitmap = getBitmap(Gfx.hudBackground);
 			huder.y = 500;
 

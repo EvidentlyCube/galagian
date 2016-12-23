@@ -41,8 +41,6 @@ package net.retrocade.retrocamel.core {
 			if (RetrocamelDisplayManager.flashStage.focus && !RetrocamelDisplayManager.flashStage.focus.stage) {
 				RetrocamelDisplayManager.flashStage.focus = null;
 			}
-
-			RetrocamelInputManager.onEnterFrameUpdate();
 		}
 	}
 }

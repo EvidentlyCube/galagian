@@ -40,7 +40,7 @@
 		}
 
 		public function Update(myID:uint):void {
-			gfx.blendMode = "normal";
+			setWhiteBlink(false);
 			barr1.alpha = 0.8 + Math.random() / 2;
 			var enx:TPlayer = Galagian.Player;
 			if (enx != null) {

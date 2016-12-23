@@ -31,7 +31,7 @@
 		}
 
 		public function Update(myID:uint):void {
-			gfx.blendMode = "normal";
+			setWhiteBlink(false);
 			var enx:TPlayer;
 			if (fall == 0) {
 				enx = Galagian.Player;

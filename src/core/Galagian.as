@@ -13,7 +13,6 @@
 	import flash.events.KeyboardEvent;
 	import flash.net.SharedObject;
 	import flash.text.TextField;
-	import flash.text.TextFieldType;
 	import flash.ui.Keyboard;
 	import flash.ui.Mouse;
 
@@ -27,9 +26,9 @@
 	import other.Waves;
 
 	public class Galagian extends Sprite implements IGalagian {
-		[Embed("../../src.assets/gfx/preloader/TitleScreen.png")]
+		[Embed("../../src.assets/gfx/TitleScreen.png")]
 		private var assetTitleScreen:Class;
-		[Embed("../../src.assets/gfx/preloader/GameOver.png")]
+		[Embed("../../src.assets/gfx/GameOver.png")]
 		private var assetGameOverScreen:Class;
 
 		public static var Player:TPlayer;
@@ -48,7 +47,6 @@
 		public static var pauser:Sprite = new Sprite;
 		public static var titleScreenBitmap:Bitmap;
 		public static var gameOverContainer:Sprite = new Sprite;
-		public static var govtxt:TextField = new TextField;
 		public static var gameOverInstructionsText:TextField = new TextField;
 		public static var modex:Array = new Array(3);
 		public static var txt3:TextField = new TextField;
@@ -115,26 +113,14 @@
 			gameOverInstructionsText.y = 250;
 			gameOverInstructionsText.textColor = 0xFFFFFF;
 			gameOverInstructionsText.visible = false;
-
-			govtxt.background = true;
-			govtxt.backgroundColor = 0x111111;
-			govtxt.textColor = 0xFFFFFF;
-			govtxt.type = TextFieldType.INPUT;
-			govtxt.selectable = true;
-			govtxt.width = 330;
-			govtxt.height = 25;
-			govtxt.x = 85;
-			govtxt.y = 290;
-			govtxt.visible = false;
-			govtxt.border = true;
-			govtxt.borderColor = 0xFFFFFF;
-			govtxt.maxChars = 32;
+			gameOverInstructionsText.mouseEnabled = false;
+			gameOverInstructionsText.selectable = false;
 
 			txt3.background = true;
 			txt3.backgroundColor = 0x111111;
 			txt3.textColor = 0xFFFFFF;
 			txt3.embedFonts = true;
-			txt3.htmlText = "<font face='Fonter' size='20'>Cancel</font>";
+			txt3.htmlText = "<font face='Fonter' size='20'>Close</font>";
 			txt3.width = 85;
 			txt3.height = 28;
 			txt3.selectable = false;
@@ -144,7 +130,6 @@
 			txt3.y = 330;
 
 			gameOverContainer.addChild(getBitmap(assetGameOverScreen));
-			gameOverContainer.addChild(govtxt);
 			gameOverContainer.addChild(gameOverInstructionsText);
 			gameOverContainer.addChild(txt3);
 
@@ -201,7 +186,6 @@
 				bgw = 5
 			}
 			if (gameOverContainer.alpha > 1) {
-				govtxt.visible = true;
 				gameOverInstructionsText.visible = true;
 				for (en = List.Effects.length - 1; en >= 0; en--) {
 					List.Effects[en].U(en)
@@ -274,9 +258,7 @@
 			}
 			if (gameOverContainer.alpha > 0 && List.Effects.length == 0) {
 				if (realMouseX > 300 && realMouseX < 385 && realMouseY > 330 && realMouseY < 358) {
-					govtxt.visible = false;
 					gameOverInstructionsText.visible = false;
-					govtxt.text = "";
 					gameOverContainer.alpha = 0;
 					titleScreenBitmap.alpha = 1;
 					Hud.instance.lives = 3;

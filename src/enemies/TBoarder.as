@@ -30,7 +30,7 @@
 		}
 
 		public function Update(myID:uint):void {
-			gfx.blendMode = "normal";
+			setWhiteBlink(false);
 			x += movex;
 			y += movey;
 			if (Math.random() < 0.009 * Galagian.diffAtk) {

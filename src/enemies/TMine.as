@@ -41,7 +41,7 @@
 		}
 
 		public function Update(myID:uint):void {
-			gfx.blendMode = "normal";
+			setWhiteBlink(false);
 			tim--;
 			if (tim == 0) {
 				tim = 4;

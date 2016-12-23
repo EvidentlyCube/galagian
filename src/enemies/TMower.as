@@ -43,7 +43,7 @@
 		}
 
 		public function Update(myID:uint):void {
-			gfx.blendMode = "normal";
+			setWhiteBlink(false);
 			gfx.rotation -= 10 + y / 40;
 			var enx:TPlayer = Galagian.Player;
 			if (enx != null) {

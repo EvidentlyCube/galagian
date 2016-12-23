@@ -4,9 +4,22 @@
 	import core.Sfx;
 
 	import flash.display.Sprite;
+	import flash.filters.ColorMatrixFilter;
 
-	
+
 	public class TObject {
+		private static var blink:Array;
+
+		{
+			blink = [
+				new ColorMatrixFilter([
+					1, 0, 0, 0, 255,
+					0, 1, 0, 0, 255,
+					0, 0, 1, 0, 255,
+					0, 0, 0, 1, 0
+				])
+			];
+		}
 		public var x:Number;
 		public var y:Number;
 		public var wid:uint;
@@ -27,7 +40,7 @@
 			if (sound) {
 				Sfx.sound("tck")
 			}
-			gfx.blendMode = "erase";
+			setWhiteBlink(true);
 			if (hp > dam) {
 				hp -= dam;
 				return 0
@@ -42,6 +55,14 @@
 
 		public function kill():void {
 			Galagian.layerMid.removeChild(gfx)
+		}
+
+		protected function setWhiteBlink(value:Boolean):void{
+			if (value){
+				gfx.filters = blink;
+			} else {
+				gfx.filters = null;
+			}
 		}
 	}
 

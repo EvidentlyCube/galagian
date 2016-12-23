@@ -39,7 +39,7 @@
 		}
 
 		public function Update(myID:uint):void {
-			gfx.blendMode = "normal";
+			setWhiteBlink(false);
 			midx = x + wid / 2;
 			midy = y + hei / 2;
 			if (x < 80) {

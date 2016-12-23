@@ -45,7 +45,7 @@
 		}
 
 		public function Update(myID:uint):void {
-			gfx.blendMode = "normal";
+			setWhiteBlink(false);
 			x += movex;
 			y += movey;
 			gfx.rotation += rotspd;
